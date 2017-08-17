@@ -1,0 +1,11 @@
+
+<div class="card">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name, placeholder: "Yummy Cocktail Name!" %>
+    <div class="flexybuttons">
+      <div> <%= f.button :submit, class: "btn btn-primary"  %></div>
+        <div> <%= link_to 'Back', cocktails_path, class: "btn btn-danger" %> </div>
+    </div>
+  <% end %>
+</div>
+

@@ -23,3 +23,6 @@ $border-radius-large: 2px;
 $border-radius-small: 2px;
 
 // Override other variables below!
+
+$list-group-border:             none !default;
+$font-size-h2:            floor(($font-size-base * 1.15)) !default; // ~30px

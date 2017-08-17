@@ -1,0 +1,36 @@
+<div class="wrapper">
+        <div class="card radius shadowDepth1">
+          <div class="card__image border-tlr-radius">
+            <img src="http://lorempixel.com/400/200/nightlife/" alt="image" class="border-tlr-radius">
+          </div>
+          <div class="card__content card__padding">
+            <div class="card__meta">
+              <p>Slade's Cocktail Recipes<p>
+            </div>
+
+            <article class="card__article">
+              <h2><%= @cocktail.name %></h2>
+              <ul class="list-group">
+                <% @cocktail.doses.each do |dose| %>
+                  <li class="list-group-item">
+                  <span class="badge pull-left"> <%= dose.amount %> </span> <bold><%= dose.ingredient.name %></bold> <%= link_to dose_path(dose), method: :delete do %>
+                      <i class="fa fa-window-close" aria-hidden="true"></i>
+                    <% end %>
+                      </li>
+
+                <% end %>
+              </ul>
+              <%= simple_form_for([@cocktail, @dose]) do |f| %>
+                <%= f.input :amount, placeholder: "enter dose" %>
+                <%= f.input :ingredient_id, collection: Ingredient.all %>
+                <%# f.association :ingredient %>
+                <%= f.button :submit, class: "btn btn-primary"  %>
+              <% end %>
+              <%= link_to 'Back', cocktails_path %>
+            </article>
+          </div>
+
+        </div>
+
+
+      </div>
