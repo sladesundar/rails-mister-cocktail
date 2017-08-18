@@ -5,12 +5,16 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
 gem "bootstrap-sass"
 gem "font-awesome-sass"
 gem "simple_form"
 gem "autoprefixer-rails"
 ruby '2.3.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
 gem 'rails', '~> 5.0.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
@@ -26,6 +30,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
+gem 'jquery-ui-rails'
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -43,6 +48,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'json'
+  gem 'simple_form_autocomplete'
 end
 
 group :development do

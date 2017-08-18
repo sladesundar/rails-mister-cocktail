@@ -10,6 +10,9 @@
 
             <article class="card__article">
               <h2><%= @cocktail.name %></h2>
+                <div class="card__meta">
+                  <p>Add Ingredients Below <i class="fa fa-angle-double-down" aria-hidden="true"></i><p>
+                </div>
               <ul class="list-group">
                 <% @cocktail.doses.each do |dose| %>
                   <li class="list-group-item">
