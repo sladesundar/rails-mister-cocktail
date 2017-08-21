@@ -1,7 +1,7 @@
 <div class="wrapper">
         <div class="card radius shadowDepth1">
           <div class="card__image border-tlr-radius">
-            <img src="https://unsplash.it/400/200" alt="image" class="border-tlr-radius">
+            <%= cl_image_tag @cocktail.photo, height: 200, width: 400, :crop=>"lfill" %>
           </div>
           <div class="card__content card__padding">
             <!-- <div class="card__meta">
